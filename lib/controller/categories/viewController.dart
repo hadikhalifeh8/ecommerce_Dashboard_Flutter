@@ -21,8 +21,6 @@ class  CategoryViewController extends GetxController{
 
      update(); //insert بس إعمل  update بمحي المعلومات القديه وبعمل 
 
-
-
      var response = await categoriesData.getData(); //loading هون خلص 
 
      print("***************##############************* Controler $response ");

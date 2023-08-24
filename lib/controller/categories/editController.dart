@@ -122,7 +122,7 @@ catch(_){
     nameEn = TextEditingController();
 
 
-    // get data from view to texts in edit
+    // get data from db view to texts in edit
     nameAr.text = categoriesModel!.nameAr.toString();
     nameEn.text = categoriesModel!.nameEn.toString();
 

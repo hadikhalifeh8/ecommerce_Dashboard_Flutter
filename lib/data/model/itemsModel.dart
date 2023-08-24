@@ -8,9 +8,9 @@ class ItemsModel {
   String? image;
   int? count;
   int? active;
-  int? price;
+  num ? price;
   int? discount;
-  int? itemspricediscount;
+  num ? itemspricediscount;
   int? favorite;
   String? createdAt;
   String? updatedAt;

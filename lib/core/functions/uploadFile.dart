@@ -1,5 +1,8 @@
 import 'dart:io';
+import 'package:ecommerce_dashboard/core/constant/Colors.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 
@@ -35,4 +38,57 @@ fileUploadGallery([isSvg = false]) async
     }else{
       return null;
     }
+}
+
+
+showbuttommenue(imageUploadCamera, fileUploadGallery)
+{ 
+  Get.bottomSheet(
+ //   Directionality(
+            //  textDirection: TextDirection.rtl, 
+    //  child:
+       Container(
+        color: Colors.white,
+                      padding: const EdgeInsets.all(10.0),
+                      height: 200,
+      child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+          
+              children: <Widget>[
+                Container(child: const Text("choose Image", style: TextStyle(fontSize: 22.0, 
+                                     color: AppColor.primaryColor, fontWeight: FontWeight.bold),),
+                ),
+
+               const  Padding(padding: EdgeInsets.only(top:10.0)),
+
+    ListTile(onTap: (){
+                               
+                                 imageUploadCamera(); 
+                                    Get.back();
+                                    },
+
+              leading: const Icon(Icons.camera_alt),
+              title: const Text("image from camera", style: TextStyle(fontSize: 22.0)),
+              
+    ), 
+               
+
+    ListTile(onTap: (){
+                               
+                                 fileUploadGallery(); 
+                                    Get.back();
+                                    },
+
+              leading: const Icon(Icons.image),
+              title: const Text("image from gallery", style: TextStyle(fontSize: 22.0)),
+              
+    ), 
+
+
+
+              ],),   
+
+      ),
+     // )
+  );
 }

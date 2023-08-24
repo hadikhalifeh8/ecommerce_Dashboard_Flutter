@@ -1,33 +1,33 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecommerce_dashboard/controller/categories/viewController.dart';
+import 'package:ecommerce_dashboard/controller/items/viewController.dart';
 import 'package:ecommerce_dashboard/core/class/handlingDataView.dart';
-import 'package:ecommerce_dashboard/core/constant/imageasset.dart';
 import 'package:ecommerce_dashboard/core/constant/routes.dart';
-import 'package:ecommerce_dashboard/data/model/categoriesmodel.dart';
 import 'package:ecommerce_dashboard/linkapi.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-class categoriesView  extends StatelessWidget {
-  const categoriesView ({Key? key}) : super(key: key);
+class ItemsView  extends StatelessWidget {
+  const ItemsView ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
    
-    Get.put(CategoryViewController());
+    Get.put(ItemViewController());
   
     return Scaffold(
-      appBar: AppBar(title: Text("Categories"),),
+      appBar: AppBar(title: const Text("Items"),),
 
       
       floatingActionButton: FloatingActionButton(
-                                  onPressed: (){Get.toNamed(AppRoute.addcategory);},
+                                  onPressed: (){Get.toNamed(AppRoute.additem);},
                                   child: const Icon(Icons.add),
          ),
 
 
       
-      body: GetBuilder<CategoryViewController>(builder: ((controller) =>
+      body: GetBuilder<ItemViewController>(builder: ((controller) =>
        
        HandlingDataView(
                       statusRequest: controller.statusRequest,
@@ -50,12 +50,13 @@ class categoriesView  extends StatelessWidget {
           itemBuilder: (context, index) {
 
               return Container(height: 80,
-                child:
-                 InkWell( // for edit 
+
+                child: InkWell(// for edit
                   onTap: (){
                          controller.goToPageEdit(controller.data[index]); //Model بمرر ال 
 
                   },
+
                   child: Card(child: Row(children: [ 
                 
                 
@@ -64,14 +65,18 @@ class categoriesView  extends StatelessWidget {
                      Container(
                       padding: const EdgeInsets.all(10.0),
                       
-                      child: SvgPicture.network('${Applink.imageCategories}/${controller.data[index].image.toString()}'))
-                      
+                      child: CachedNetworkImage(imageUrl: '${Applink.imageItems}/${controller.data[index].image.toString()}'
+                      )
                       ),
-                              
+                    ),
+                      
+                                 
                 
                     Expanded(flex: 3,
                     child: ListTile(
                                     title: Text(controller.data[index].nameEn.toString(),),
+                                    subtitle: Text(controller.data[index].categoryRltn!.nameEn.toString(),),
+                
                 
                                     //subtitle: Text(controller.data[index].createdAt.toString(),),
                                     
@@ -86,7 +91,7 @@ class categoriesView  extends StatelessWidget {
                             onCancel: (){}, 
                          
                            onConfirm: (){
-                            controller.deletecategory(controller.data[index].id.toString());
+                            controller.deleteItem(controller.data[index].id.toString());
                              
                              Get.back(); //ok عشان تنشال بس إكبس 
                            }
@@ -94,7 +99,7 @@ class categoriesView  extends StatelessWidget {
                        );
                              
                           }, 
-                          icon: const Icon(Icons.delete_forever, color: Colors.red),), 
+                          icon: const Icon(Icons.delete_forever, color: Colors.red,),), 
                 
                 
                   /*********************************** Edit icon  ***************************************************** */
@@ -105,9 +110,10 @@ class categoriesView  extends StatelessWidget {
                           //  }, 
                          
                           // icon: const Icon(Icons.edit, color: Colors.blue),
-                          // ), 
+                          // ),
                 
-                          ],)         
+                          ],
+                          )         
                     
                     )),
                   ],)

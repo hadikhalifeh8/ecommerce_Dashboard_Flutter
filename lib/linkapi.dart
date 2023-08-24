@@ -128,9 +128,9 @@ static const String resetPassword = "http://comm-app.local/api/Admin_reset-passw
 
 
  //==============================  Items (add / edit/ view)  ================================== // 
-      static  String viewItem = "http://192.168.0.107/laravel/E-commerceApp/public/api/getallcategories";
-      static  String addItem = "http://192.168.0.107/laravel/E-commerceApp/public/api/insertcategory";
-      static  String editItem = "http://192.168.0.107/laravel/E-commerceApp/public/api/updatecategory";
-      static  String deleteItem = "http://192.168.0.107/laravel/E-commerceApp/public/api/deleteitem";
+      static  String viewItem = "http://comm-app.local/api/getallitems";
+      static  String addItem = "http://comm-app.local/api/insertitem";
+      static  String editItem = "http://comm-app.local/api/updateitem";
+      static  String deleteItem = "http://comm-app.local/api/deleteitem";
 
 }

@@ -2,6 +2,9 @@ import 'package:ecommerce_dashboard/core/constant/routes.dart';
 import 'package:ecommerce_dashboard/core/middleware/myMiddleware.dart';
 import 'package:ecommerce_dashboard/view/screen/Home/home.dart';
 import 'package:ecommerce_dashboard/view/screen/Home/OrderScreen.dart';
+import 'package:ecommerce_dashboard/view/screen/Items/add.dart';
+import 'package:ecommerce_dashboard/view/screen/Items/edit.dart';
+import 'package:ecommerce_dashboard/view/screen/Items/view.dart';
 import 'package:ecommerce_dashboard/view/screen/Test/test.dart';
 
 import 'package:ecommerce_dashboard/view/screen/auth/forgetpassword/checkEmail.dart';
@@ -59,6 +62,11 @@ List<GetPage<dynamic>>? routes = [
    GetPage(name:  AppRoute.editcategory, page: () => const CategoriesEdit(),),
 
 
+
+    // Items / Products
+   GetPage(name:  AppRoute.viewitem, page: () => const ItemsView(),),
+   GetPage(name:  AppRoute.additem, page: () => const ItemsAdd(),),
+   GetPage(name:  AppRoute.edititem, page: () => const ItemsEdit(),),
 
 
 

@@ -83,6 +83,11 @@ import 'package:path/path.dart'; // for basename
 
           print(response.statusCode) ; 
 print("hahas");
+print(linkurl);
+print("body: $data");
+
+
+
         if (response.statusCode == 200 || response.statusCode == 201) {
           print("hahad"); 
           Map responsebody = jsonDecode(response.body); // jsondecod :json برجع معلومات بهيإت 

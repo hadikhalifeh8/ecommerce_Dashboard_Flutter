@@ -76,6 +76,7 @@ class  CategoryAddController extends GetxController{
       CategoryViewController controller = Get.find();
 
       controller.getData();
+      
 
     //to refresh directly when insert data
 

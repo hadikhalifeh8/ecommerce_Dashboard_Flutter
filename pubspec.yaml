@@ -82,6 +82,7 @@ dependencies:
   rating_dialog: ^2.0.4
   flutter_svg: ^0.23.0+1
   file_picker: ^4.6.1 
+  drop_down_list: ^0.0.5
 
 dev_dependencies:
   flutter_test:
