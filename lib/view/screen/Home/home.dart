@@ -43,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                 CardAdminHome(image: (AppImageAsset.users), title: "users", onClick: (){}),
 
 
-                CardAdminHome(image: (AppImageAsset.orders), title: "Orders", onClick: (){}),
+                CardAdminHome(image: (AppImageAsset.orders), title: "Orders", onClick: (){Get.toNamed(AppRoute.screenOrder);}),
 
 
                 CardAdminHome(image: (AppImageAsset.reports), title: "Reportss", onClick: (){}), 

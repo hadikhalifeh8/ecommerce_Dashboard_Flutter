@@ -1,6 +1,7 @@
+import 'package:ecommerce_dashboard/view/screen/orders/acceptedOrders.dart';
+import 'package:ecommerce_dashboard/view/screen/orders/archeiveOrders.dart';
+import 'package:ecommerce_dashboard/view/screen/orders/pendingOrders.dart';
 
-import 'package:ecommerce_dashboard/view/screen/Home/home.dart';
-import 'package:ecommerce_dashboard/view/screen/Home/OrderScreen.dart';
 
 
 import 'package:flutter/cupertino.dart';
@@ -20,9 +21,11 @@ class OrderScreenControllerImp extends OrderScreenController{
 // list of pages
 List<Widget> listPage =[
 
-//  const  OrdersPending(),
-// const OrdersAccepted(),
-Text(""),
+ const  OrdersPending(),
+const OrdersAccepted(),
+const OrdersArchive(),
+
+// Text(""),
 
 
  
@@ -48,7 +51,7 @@ List listBottomAppBar = [
   // "homesss" , 
   { "title" : "Pending", "icon" : Icons.bookmark_add,},
   {"title" : "Acccepted", "icon" : Icons.add_task_sharp,}, 
-     {"title" : "Settings", "icon" : Icons.settings,},
+     {"title" : "Archive", "icon" : Icons.archive,},
 
  
 

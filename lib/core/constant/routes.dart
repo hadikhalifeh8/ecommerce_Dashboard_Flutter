@@ -25,10 +25,14 @@ class AppRoute {
 
 
 
-             // View Orders Pending / Archieve /details page
+   // View orderScreen:  Orders Pending / Archieve /details page
  
+ static const String  screenOrder ="/screenOrder";
+
  static const String  archieveOrders = "/archieveOrders";
  static const String  detailsOrder = "/detailsOrder";
+ static const String  pendingOrders ="/pendingOrders";
+
 
 
       // Categories

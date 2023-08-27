@@ -9,7 +9,9 @@ class AppColor {
   static const Color secoundColor = Color(0xffc0392b);
   static const Color thirdColor = Color.fromARGB(255, 255, 179, 170); 
  static const Color fourthColor = Color.fromARGB(255, 10, 30, 61);
-  static const Color backgroundColor = Color(0xffFBF9FD);  
+  static const Color backgroundColor = Color(0xffFBF9FD);
+  static const Color whiteColor = Color.fromARGB(0, 255, 255, 255);  
+
 
 
 

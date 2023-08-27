@@ -108,12 +108,17 @@ static const String resetPassword = "http://comm-app.local/api/Admin_reset-passw
 
 
       // //==============================  View orders (Archeive / Pending/ Details)  ================================== // 
-      // static  String viewpendingOrders = "http://192.168.0.107/laravel/E-commerceApp/public/api/view_Pending_Order_To_DeliveryMan";
-      // static  String approveOrder = "http://192.168.0.107/laravel/E-commerceApp/public/api/Delivery_Man_Approved";
-      // static  String viewacceptedOrder = "http://192.168.0.107/laravel/E-commerceApp/public/api/view_Accepted_Order_To_DeliveryMan";
-      // static  String archiveOrder = "http://192.168.0.107/laravel/E-commerceApp/public/api/archive_Order_To_DeliveryMan";
-      // static  String detailsOrder = "http://192.168.0.107/laravel/E-commerceApp/public/api/details_Order";
-      // static  String doneOrderDlivery = "http://192.168.0.107/laravel/E-commerceApp/public/api/done";
+      static  String viewpendingOrders = "http://comm-app.local/api/view_Pending_Order_To_Admin";
+      static  String viewAcceptedOrders= "http://comm-app.local/api/view_Accepted_Orders_To_Admin";
+
+      
+      static  String approveOrder = "http://comm-app.local/api/approved_Order";
+      static  String prepareOrder = "http://comm-app.local/api/prepared_Orders_Show"; // orderid / userid && ordertype
+      
+      static  String archiveOrder = "http://comm-app.local/api/archive_Order_To_Admin";
+      
+      static  String detailsOrder = "http://comm-app.local/api/details_Order";
+      static  String doneOrderDlivery = "http://192.168.0.107/laravel/E-commerceApp/public/api/done";
 
 
 
