@@ -3,6 +3,7 @@ import 'package:ecommerce_dashboard/core/constant/routes.dart';
 import 'package:ecommerce_dashboard/core/functions/handlingDataController.dart';
 import 'package:ecommerce_dashboard/core/services/services.dart';
 import 'package:ecommerce_dashboard/data/datasource/remote/auth/login_data.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
@@ -93,6 +94,13 @@ Myservices myservices = Get.find();
 
   @override
   void onInit() {
+
+  FirebaseMessaging.instance.getToken().then((value) 
+  {
+    print("the token id for firebase is: $value");
+    String? token = value;
+  });
+
     email = TextEditingController();
     password = TextEditingController();
     

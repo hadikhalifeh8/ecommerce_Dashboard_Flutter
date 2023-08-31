@@ -192,10 +192,10 @@ catch(_){
        data.addAll(datalist.map((e) => CategoriesModel.fromJson(e)));
 
  update();
-       for(int i = 0; i <= data.length; i++)
+       for(int i = 0; i < data.length; i++)
        {
           dropdownList.add(SelectedListItem(
-                                            name: data[i].nameEn!,
+                                            name: data[i].nameEn.toString(),
                                             value: data[i].id.toString(),
                                             )  
                                             );

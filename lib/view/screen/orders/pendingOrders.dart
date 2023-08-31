@@ -7,9 +7,10 @@ import 'package:ecommerce_dashboard/core/constant/routes.dart';
 import 'package:ecommerce_dashboard/data/model/orderModel.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-
 import 'package:jiffy/jiffy.dart';
+
+
+
 
 class OrdersPending extends StatelessWidget {
   const OrdersPending({Key? key}) : super(key: key);
@@ -73,7 +74,10 @@ class CardOrdersList extends GetView<OrdersPendingController> {
                          
                           // Text("${listdata.orderDate}"),
                           //  Text("${Jiffy("2011-10-31", "yyyy-MM-dd").fromNow()}"),
-                           Text(Jiffy(listdata.orderDate, "yyyy-MM-dd").fromNow(),
+                          //  Text(Jiffy(listdata.orderDate, "yyyy-MM-dd").fromNow(),
+                         Text(Jiffy.parse("${listdata.orderDate}",).fromNow(),
+                         
+
                            style: TextStyle(color: AppColor.primaryColor, fontWeight: FontWeight.bold),
                            
                            ),

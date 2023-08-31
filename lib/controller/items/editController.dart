@@ -64,8 +64,22 @@ class  ItemEditController extends GetxController{
     File? file;
 
 
+ showOptionImage()
+{
+  showbuttommenue(chooseImageCamera, chooseImageGallery);
+}
+
    // from lib/core/functions
-   chooseImage() async
+   chooseImageCamera() async
+   {
+      file = await imageUploadCamera();
+      update(); // refresh ui
+   }
+
+  
+
+   // from lib/core/functions
+   chooseImageGallery() async
    {
       file = await fileUploadGallery(false);
       update(); // refresh ui
@@ -207,7 +221,7 @@ catch(_){
        data.addAll(datalist.map((e) => CategoriesModel.fromJson(e)));
 
  update();
-       for(int i = 0; i <= data.length; i++)
+       for(int i = 0; i < data.length; i++)
        {
           dropdownList.add(SelectedListItem(
                                             name: data[i].nameEn!.toString(),

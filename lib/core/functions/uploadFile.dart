@@ -7,16 +7,33 @@ import 'package:image_picker/image_picker.dart';
 
 
 
-imageUploadCamera() async
-{
-   final PickedFile? file = await ImagePicker().getImage(source: ImageSource.camera, imageQuality: 90 );
 
-       // إذا الشخص إختار صوره
-    if(file !=null) { 
-      return File(file.path); // return path
-    }else{
-      return null;
-    }
+
+// imageUploadCamera() async
+// {
+  
+//   //  final PickedFile? file = await ImagePicker().getImage(source: ImageSource.camera, imageQuality: 90 );
+
+//  final PickedFile? file = await ImagePicker().pickImage(source: ImageSource.camera, imageQuality: 90 );
+
+//        // إذا الشخص إختار صوره
+//     if(file !=null) { 
+//       return File(file.path); // return path
+//     }else{
+//       return null;
+//     }
+// }
+
+
+
+Future<File?> imageUploadCamera() async {
+  final XFile? file = await ImagePicker().pickImage(source: ImageSource.camera, imageQuality: 90);
+
+  if (file != null) {
+    return File(file.path);
+  } else {
+    return null;
+  }
 }
 
 

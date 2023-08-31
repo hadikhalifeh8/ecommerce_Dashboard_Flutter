@@ -157,7 +157,7 @@ class ItemsEdit extends StatelessWidget {
 
            // controler.chooseImage();
 
-          controler.chooseImage();
+          controler.showOptionImage();
 
          },
           child:   Text("Choose Image",style: TextStyle(color: Colors.white),),color: AppColor.secoundColor,

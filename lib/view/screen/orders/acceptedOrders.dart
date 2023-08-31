@@ -71,7 +71,9 @@ class CardOrdersList extends GetView<OrdersAcceptingController> {
                          
                           // Text("${listdata.orderDate}"),
                           //  Text("${Jiffy("2011-10-31", "yyyy-MM-dd").fromNow()}"),
-                           Text(Jiffy(listdata.orderDate, "yyyy-MM-dd").fromNow(),
+                          //  Text(Jiffy(listdata.orderDate, "yyyy-MM-dd").fromNow(),
+
+                          Text(Jiffy.parse("${listdata.orderDate}",).fromNow(),
                            style: TextStyle(color: AppColor.primaryColor, fontWeight: FontWeight.bold),
                            
                            ),
